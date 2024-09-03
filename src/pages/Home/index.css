@@ -1,0 +1,15 @@
+.arrow-btn{
+    font-size: 50px;
+    font-weight: bolder;
+   
+}
+.outerdiv{
+    width: 80%;
+height: 0.3rem;
+background-color:var(--black-color);
+}
+.innerdiv{
+    width: 70%;
+    height: 0.3rem;
+background-color: var( --footer-color);
+}

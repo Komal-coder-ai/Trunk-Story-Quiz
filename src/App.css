@@ -1,0 +1,38 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  /* Removed max-width to allow for more responsive design */
+}
+
+html, #root {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Allows content area to grow and push footer to the bottom */
+}
+
+footer {
+  margin-top: auto; /* Ensure footer is pushed to the bottom */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px; /* Add padding on small screens */
+  }
+
+  .main-content {
+    padding: 10px; /* Add padding inside main content */
+  }
+}

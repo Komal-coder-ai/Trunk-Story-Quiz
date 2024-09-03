@@ -1,0 +1,10 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+:root{
+
+    --footer-color: #93b6ae;
+    --black-color: rgb(13, 13, 13);
+}
