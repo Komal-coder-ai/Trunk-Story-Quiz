@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import CallReceivedIcon from '@mui/icons-material/CallReceived';
 import homeImage from '../../assets/homePage.png';
 import ButtonDynamic from '../../components/button/Index';
 import Footer from '../../components/footer/Index';
 import './index.css';
 import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
-import { HiArrowDownLeft } from 'react-icons/hi2';
+
 
 const Home = () => {
   return (
@@ -23,7 +23,9 @@ const Home = () => {
           <Grid item xs={2} container justifyContent="flex-end">
 
             <span className="arrow-btn" >
-              <HiArrowDownLeft sx={{ fontWeight: 'bold' }} />
+              <CallReceivedIcon
+              style={{ fontWeight: '900' ,fontSize:"50px"}}
+              />
               {/* <ArrowOutwardIcon sx={{ fontWeight: 'bold' ,fontSize:"30px"}} /> */}
             </span>    </Grid>
         </Grid>

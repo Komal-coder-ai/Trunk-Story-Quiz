@@ -7,10 +7,11 @@ import Footer from './components/footer/Index';
 import Header from './components/header/Index';
 
 import './App.css';
+import Result from './pages/Result/Index';
 
 const App = () => {
   const location = useLocation();
-  const showHeaderFooter = location.pathname === '/' || location.pathname === '/startquiz';
+  const showHeaderFooter = location.pathname === '/' || location.pathname === '/startquiz' || location.pathname === '/results';
 
   return (
     <div className="app-container">
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/startquiz" element={<SelectQuiz />} />
           <Route path="/quiz/:category" element={<QuizQuestions />} />
+          <Route path="/results" element={<Result />} />
+
         </Routes>
       </main>
     <Footer />

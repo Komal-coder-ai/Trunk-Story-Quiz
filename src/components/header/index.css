@@ -1,4 +1,20 @@
-.mobile-navbar{
-    position: fixed;
-bottom: 20px;
+.mobile-navbar {
+  position: fixed;
+  bottom: 20px;
+}
+
+@media (min-width: 601px) {
+  body {
+    max-width: 400px;
+    width: 400px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* border: 1px solid; */
+    height: 100vh;
+    z-index: -1;
+  }
+
+  .mobile-navbar {
+    width: 500px;
+  }
 }
