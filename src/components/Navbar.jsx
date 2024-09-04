@@ -5,14 +5,24 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div>
-         <ul
-           style={{width: '100%', display: 'flex', listStyle: 'none',height:'100%',alignItems:'center', textDecoration: 'none', color: 'white', fontSize: '15px', fontWeight: 'bolder' }}
-           > <Link to="/" style={{ textDecoration: 'none' }}>
-           
-            <li style={{fontSize:"15px " ,color:"black" }}> Home | </li></Link>
-            <li style={{fontSize:"15px " ,color:"black" }}> Privacy Policy | </li>
-            <li style={{fontSize:"15px " ,color:"black" }}> Terms and conditions </li>
-           </ul>
+      <ul
+        style={{
+          width: '100%',
+          display: 'flex',
+          listStyle: 'none',
+          height: '100%',
+          alignItems: 'center',
+           textDecoration: 'none', 
+           color: 'white',
+            fontSize: '15px', 
+            fontWeight: 'bolder'
+        }}
+      > <Link to="/" style={{ textDecoration: 'none' }}>
+
+          <li style={{ fontSize: "15px ", color: "black" }}> Home | </li></Link>
+        <li style={{ fontSize: "15px ", color: "black" }}> Privacy Policy | </li>
+        <li style={{ fontSize: "15px ", color: "black" }}> Terms and conditions </li>
+      </ul>
     </div>
   )
 }

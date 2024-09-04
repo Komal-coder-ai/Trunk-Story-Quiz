@@ -24,11 +24,20 @@ const Footer = () => {
         position: "fixed",
         bottom: 0,
         left: 0,
-        zIndex: 1000, 
+        zIndex: -1, 
       }}
       className="footer"
     >
-      {showNavLink && <Navbar />}
+      {showNavLink &&
+     <div className="" style={  
+      {
+        marginTop: "auto",
+      }
+      }>
+        <Navbar />
+     </div>
+       
+       }
       {!showNavLink && (
         <p
           style={{
