@@ -68,7 +68,7 @@ const Quiz = () => {
             <HiArrowDownLeft className="arrow-btn" style={{ fontWeight: 'bold', fontSize: "24px" }} />
           </Grid>
 
-          <Grid item xs={11}>
+          <Grid item xs={10}>
             <Typography
               variant="h4"
               component="h2"

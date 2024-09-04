@@ -16,7 +16,7 @@ const QuizButton = ({name ,bgimage}) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '20px',
+    fontSize: '18px',
 zIndex: '1',
    }}
    >
