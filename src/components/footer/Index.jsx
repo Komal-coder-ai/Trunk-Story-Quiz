@@ -23,7 +23,7 @@ const Footer = () => {
           // position: 'relative',
           // bottom: '0',
           zIndex: '-1',
-          padding: { xs: '10px', sm: '20px', md: '30px' },
+         
         }}
         className="footer"
       >
