@@ -18,7 +18,7 @@ const Footer = () => {
           clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
           backgroundColor: "var(--footer-color)",
           height: "300px",
-          // width: "400px",
+          width: "426px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
