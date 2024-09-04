@@ -19,7 +19,7 @@ const Header = () => {
         <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}
         className="BottomNavbar mobile-navbar"
         sx={{
-          position: 'absolute',
+          position: 'fixed',
           bottom: 0,
           zIndex: 100,
         }}
