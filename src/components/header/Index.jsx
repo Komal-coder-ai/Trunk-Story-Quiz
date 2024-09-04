@@ -12,7 +12,7 @@ const Header = () => {
         alt="Home"
         sx={{
           width: '100%',
-          height: '200px',
+          // height: '200px',
           display: 'block',
         }}
         />

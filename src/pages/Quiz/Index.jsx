@@ -119,7 +119,10 @@ const Quiz = () => {
         </Grid>
 
         <Typography variant="h6" component="p" gutterBottom>
-          <strong>Q.{currentQuestionIndex + 1}/5:</strong>{" "}
+        {!selectedOption && 
+          <strong>Q.{currentQuestionIndex + 1}/5:</strong>
+        }
+{" "}
           {questions[currentQuestionIndex].text}
         </Typography>
         <div>
