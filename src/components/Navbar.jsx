@@ -15,13 +15,14 @@ const Navbar = () => {
            textDecoration: 'none', 
            color: 'white',
             fontSize: '15px', 
-            fontWeight: 'bolder'
+            fontWeight: 'bolder',
+            
         }}
       > <Link to="/" style={{ textDecoration: 'none' }}>
 
-          <li style={{ fontSize: "15px ", color: "black" }}> Home | </li></Link>
-        <li style={{ fontSize: "15px ", color: "black" }}> Privacy Policy | </li>
-        <li style={{ fontSize: "15px ", color: "black" }}> Terms and conditions </li>
+          <li style={{ fontSize: "15px ", color: "black" , letterSpacing:"0.1px"}}> Home | </li></Link>
+        <li style={{ fontSize: "15px ", color: "black" , letterSpacing:"0.1px"}}> Privacy Policy | </li>
+        <li style={{ fontSize: "15px ", color: "black", letterSpacing:"0.1px" }}> Terms and conditions </li>
       </ul>
     </div>
   )

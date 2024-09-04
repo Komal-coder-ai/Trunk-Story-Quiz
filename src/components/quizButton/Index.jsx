@@ -2,12 +2,13 @@ import { Button } from '@mui/material'
 import React from 'react'
 import bgImage from '../../assets/bgimg2.jpg'
 const QuizButton = ({ name, bgimage }) => {
+  
   return (
     <div>
-      <Button
-        sx={{
+      <button
+        style={{
           width: '100%',
-          height: '80px',
+          height: '100px',
           color: "var(--footer-color)",
           // backgroundImage: `url(${bgImage})`,
           backgroundColor: 'var(--black-color)',
@@ -18,10 +19,11 @@ const QuizButton = ({ name, bgimage }) => {
           justifyContent: 'center',
           fontSize: '18px',
           zIndex: '1',
+          borderRadius: '10px'
         }}
       >
         {name}
-      </Button>
+      </button>
 
     </div>
   )
