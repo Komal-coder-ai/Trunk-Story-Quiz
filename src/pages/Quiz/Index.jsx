@@ -7,6 +7,41 @@ import "./index.css";
 import arrowimg from '../../assets/arrow.png';
 
 const Quiz = () => {
+  // const questions = [
+  //   {
+  //     text: "Based on whose life was the movie ‘Sam Bahadur’ directed?",
+  //     options: [
+  //       { text: "Gen. Manekshaw", isCorrect: true },
+  //       { text: "Capt. Vikram Batra", isCorrect: false },
+  //       { text: "Maj. Saurabh Kalia", isCorrect: false },
+  //     ],
+  //   },
+  //   {
+  //     text: "Based on whose life was the movie ‘Sam Bahadur’ directed?",
+  //     options: [
+  //       { text: "Gen. Manekshaw", isCorrect: true },
+  //       { text: "Capt. Vikram Batra", isCorrect: false },
+  //       { text: "Maj. Saurabh Kalia", isCorrect: false },
+  //     ],
+  //   },
+  //   {
+  //     text: "Based on whose life was the movie ‘Sam Bahadur’ directed?",
+  //     options: [
+  //       { text: "Gen. Manekshaw", isCorrect: true },
+  //       { text: "Capt. Vikram Batra", isCorrect: false },
+  //       { text: "Maj. Saurabh Kalia", isCorrect: false },
+  //     ],
+  //   },
+  //   {
+  //     text: "Which planet is known as the Red Planet?",
+  //     options: [
+  //       { text: "Mars", isCorrect: true },
+  //       { text: "Venus", isCorrect: false },
+  //       { text: "Jupiter", isCorrect: false },
+  //     ],
+  //   },
+  //   // Add more questions here
+  // ];
   const questions = [
     {
       text: "Based on whose life was the movie ‘Sam Bahadur’ directed?",
@@ -24,9 +59,30 @@ const Quiz = () => {
         { text: "Jupiter", isCorrect: false },
       ],
     },
-    // Add more questions here
-  ];
-
+    {
+      text: "What is the capital city of France?",
+      options: [
+        { text: "Paris", isCorrect: true },
+        { text: "London", isCorrect: false },
+        { text: "Berlin", isCorrect: false },
+      ],
+    },
+    {
+      text: "What is the chemical symbol for gold?",
+      options: [
+        { text: "Au", isCorrect: true },
+        { text: "Ag", isCorrect: false },
+        { text: "Pb", isCorrect: false },
+      ],
+    },
+    {
+      text: "Which element is denoted by the symbol 'O' in the periodic table?",
+      options: [
+        { text: "Oxygen", isCorrect: true },
+        { text: "Osmium", isCorrect: false },
+        { text: "Oganesson", isCorrect: false },
+      ],
+    },]
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
