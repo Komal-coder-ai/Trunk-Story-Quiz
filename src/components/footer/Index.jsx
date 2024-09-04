@@ -19,6 +19,7 @@ const Footer = () => {
           backgroundColor: "var(--footer-color)",
           height: "300px",
           width: "426px",
+          // width: "400px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
