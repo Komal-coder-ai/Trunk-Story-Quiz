@@ -4,7 +4,7 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
 import CircleIcon from "@mui/icons-material/Circle";
 import "./index.css";
-
+import arrowimg from '../../assets/arrow.png'
 const Quiz = () => {
   const questions = [
     {
@@ -76,10 +76,7 @@ const Quiz = () => {
       <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} container justifyContent="flex-end" padding={0}>
-            <HiArrowDownLeft
-              className="arrow-btn"
-              style={{ fontWeight: "bold", fontSize: "24px" }}
-            />
+            <img src={arrowimg} alt="" />
           </Grid>
 
           <Grid item xs={11}>
