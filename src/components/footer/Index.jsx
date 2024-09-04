@@ -38,17 +38,9 @@ const Footer = () => {
      </div>
        
        }
-      {!showNavLink && (
-        <p
-          style={{
-            marginTop: "auto",
-            textAlign: "center",
-            width: "400px",
-          }}
-        >
-          Each quiz has 5 questions
-        </p>
-      )}
+      {/* {!showNavLink && (
+       
+      )} */}
     </Box>
   );
 };

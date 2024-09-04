@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { HiArrowDownLeft } from "react-icons/hi2";
 import { Box, Grid, Typography, Button } from "@mui/material";
-import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
+import { useParams, useNavigate } from "react-router-dom";
 import CircleIcon from "@mui/icons-material/Circle";
 import "./index.css";
-import arrowimg from '../../assets/arrow.png'
+import arrowimg from '../../assets/arrow.png';
+
 const Quiz = () => {
   const questions = [
     {
@@ -30,8 +31,10 @@ const Quiz = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
+  const [hasSelectedOption, setHasSelectedOption] = useState(false); // New state
   const { category } = useParams();
   const navigate = useNavigate();
+
   useEffect(() => {
     if (isAnswered) {
       const timer = setTimeout(() => {
@@ -61,6 +64,7 @@ const Quiz = () => {
 
         setSelectedOption(null);
         setIsAnswered(false);
+        setHasSelectedOption(false); // Reset after answer
       }, 1000);
       return () => clearTimeout(timer);
     }
@@ -69,6 +73,7 @@ const Quiz = () => {
   const handleOptionClick = (index) => {
     setSelectedOption(index);
     setIsAnswered(true);
+    setHasSelectedOption(true); // Mark that an option has been selected
   };
 
   return (
@@ -116,10 +121,9 @@ const Quiz = () => {
         </Grid>
 
         <Typography variant="h6" component="p" gutterBottom>
-        {!selectedOption && 
-          <strong>Q.{currentQuestionIndex + 1}/5:</strong>
-        }
-{" "}
+          {!hasSelectedOption &&
+            <strong>Q.{currentQuestionIndex + 1}/5:</strong>
+          }{" "}
           {questions[currentQuestionIndex].text}
         </Typography>
         <div>
@@ -131,7 +135,6 @@ const Quiz = () => {
                 display: "block",
                 width: "100%",
                 margin: "10px 0",
-                // padding: '10px',
                 border: "2px solid",
                 marginTop: "10px",
                 borderRadius: "0px",
@@ -168,22 +171,42 @@ const Quiz = () => {
           alignContent: "center",
         }}
       >
-        <div
-          className="circle"
-          style={{
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            backgroundColor: "gray",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            margin: "auto",
-          }}
-        >
-          <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
-        </div>
+
+        {!hasSelectedOption &&
+          <div
+            className="circle"
+            style={{
+              width: "40px",
+              height: "40px",
+              borderRadius: "50%",
+              backgroundColor: "gray",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              margin: "auto",
+            }}
+          >
+
+            <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
+          </div>
+        }{" "}
+
+        {!hasSelectedOption &&
+          <p
+            style={{
+              marginTop: "auto",
+              textAlign: "center",
+              width: "400px",
+              position: "fixed",
+              bottom: "0",
+              left: "0",
+            }}
+          >
+            Each quiz has 5 questions
+          </p>
+        }{" "}
+
       </div>
     </>
   );
