@@ -16,7 +16,8 @@ html, #root {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ensure full viewport height */
+  height: 100%; /* Ensure full viewport height */
+  /* width: 107vw; */
 }
 
 .main-content {

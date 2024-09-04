@@ -13,36 +13,39 @@ const Footer = () => {
 
   return (
     <>
-      <Box
-        sx={{
-          clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
-          backgroundColor: "var(--footer-color)",
-          height: "300px",
-          width: "426px",
-          // width: "400px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          // position: 'relative',
-          // bottom: '0',
-          zIndex: "-1",
-        }}
-        className="footer"
-      >
-        {showNavLink && <Navbar></Navbar>}
-        {!showNavLink && (
-          <p
-            style={{
-              marginTop: "auto",
-              textAlign: "center",
+      <div>
+        <Box
+          sx={{
+            clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
+            backgroundColor: "var(--footer-color)",
+            // height: "100vh",
+            // width: "426px",
+            width: "99vw",
+            height: "430px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            // position: 'relative',
+            // bottom: '0',
+            zIndex: "-1",
+          }}
+          className="footer"
+        >
+          {showNavLink && <Navbar></Navbar>}
+          {!showNavLink && (
+            <p
+              style={{
+                marginTop: "auto",
+                textAlign: "center",
 
-              width: "400px",
-            }}
-          >
-            Each quiz has 5 questions
-          </p>
-        )}
-      </Box>
+                width: "400px",
+              }}
+            >
+              Each quiz has 5 questions
+            </p>
+          )}
+        </Box>
+      </div>
     </>
   );
 };
