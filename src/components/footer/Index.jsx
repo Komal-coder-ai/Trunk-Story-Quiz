@@ -13,9 +13,9 @@ const Footer = () => {
 
       <Box
         sx={{
-          clipPath: "polygon(0 43%, 100% 16%, 100% 100%, 0% 100%)",
+          clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
           backgroundColor: 'var(--footer-color)',
-          height: '800px',
+          height: '300px',
           width: '400px',
           display: 'flex',
           alignItems: 'center',
@@ -23,14 +23,14 @@ const Footer = () => {
           // position: 'relative',
           // bottom: '0',
           zIndex: '-1',
-         
+
         }}
         className="footer"
       >
         {showNavLink && <Navbar></Navbar>}
         {!showNavLink && <p
           style={{
-
+            marginTop: "auto",
             textAlign: 'center',
 
             width: '400px',
