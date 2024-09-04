@@ -13,7 +13,7 @@ const SelectQuiz = () => {
 
   return (
     <>
-      <Container>
+      <Container >
         <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
           <Grid item xs={11}>
             <h2>Select a category of your choice to begin the quiz</h2>
@@ -27,7 +27,7 @@ const SelectQuiz = () => {
         </Box>
       </Grid>
 
-      <Grid container spacing={2} sx={{ mx: 0.1 }}>
+      <Grid container spacing={1} sx={{ mx: 0.1 }}>
         <Grid item xs={5.6} sm={5.6} md={5.6} onClick={() => startQuiz('indian-army')}>
           <QuizButton name="Indian Army"  />
         </Grid>

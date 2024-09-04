@@ -68,13 +68,13 @@ const Quiz = () => {
             <HiArrowDownLeft className="arrow-btn" style={{ fontWeight: 'bold', fontSize: "24px" }} />
           </Grid>
 
-          <Grid item xs={10}>
+          <Grid item xs={11}>
             <Typography
               variant="h4"
               component="h2"
               gutterBottom
               sx={{
-                fontSize: '50px',
+                fontSize: '40px',
                 textAlign: 'left',
                 fontWeight: 'bold'
               }}
@@ -93,7 +93,7 @@ const Quiz = () => {
           </Grid>
         </Grid>
 
-        <Grid container justifyContent="center" alignItems="center" sx={{ my: 3 }}>
+        <Grid container justifyContent="center" alignItems="center" sx={{ my: 1 }}>
           <Box className="outerdiv">
             <Box className="innerdiv"></Box>
           </Box>
@@ -111,9 +111,9 @@ const Quiz = () => {
                 display: 'block',
                 width: '100%',
                 margin: '10px 0',
-                padding: '10px',
+                // padding: '10px',
                 border: '2px solid',
-                marginTop: '20px',
+                marginTop: '10px',
                 borderRadius: '0px',
                 borderColor: selectedOption === index
                   ? option.isCorrect
