@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        clipPath: 'polygon(0 83%, 100% 44%, 100% 100%, 0% 100%)',
+        clipPath: "polygon(0 68%, 100% 16%, 100% 100%, 0% 100%)",
+
         backgroundColor: 'var(--footer-color)',
         height:'200px',
         width: '400px',
@@ -20,7 +21,7 @@ const Footer = () => {
       }}
       className="footer"
     >
-      Footer Content
+    
     </Box>
   );
 };

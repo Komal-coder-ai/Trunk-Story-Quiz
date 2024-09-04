@@ -117,13 +117,13 @@ const Quiz = () => {
                 borderRadius: '0px',
                 borderColor: selectedOption === index
                   ? option.isCorrect
-                    ? 'green'
-                    : 'red'
+                    ? 'var(--green-color)'
+                    : 'var(--gray-color)'
                   : '#000',
                 backgroundColor: selectedOption === index
                   ? option.isCorrect
-                    ? 'lightgreen'
-                    : 'lightcoral'
+                    ? 'var(--green-color)'
+                    : 'var(--red-color)'
                   : '#fff',
                 cursor: 'pointer',
                 textAlign: 'left',

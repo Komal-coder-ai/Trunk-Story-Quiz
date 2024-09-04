@@ -14,9 +14,9 @@ const SelectQuiz = () => {
   return (
     <>
       <Container>
-        <Grid container spacing={2} alignItems="center" justifyContent={"center"}>
-          <Grid item xs={12}>
-            <h1>Select a category of your choice to begin the quiz</h1>
+        <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
+          <Grid item xs={11}>
+            <h2>Select a category of your choice to begin the quiz</h2>
           </Grid>
         </Grid>
       </Container>
@@ -28,16 +28,16 @@ const SelectQuiz = () => {
       </Grid>
 
       <Grid container spacing={2} sx={{ mx: 0.1 }}>
-        <Grid item xs={5.2} sm={5.2} md={5.2} onClick={() => startQuiz('indian-army')}>
+        <Grid item xs={5.6} sm={5.6} md={5.6} onClick={() => startQuiz('indian-army')}>
           <QuizButton name="Indian Army"  />
         </Grid>
-        <Grid item xs={5.2} sm={5.2} md={5.2}onClick={() => startQuiz('indian-navy')}>
+        <Grid item xs={5.6} sm={5.6} md={5.6}onClick={() => startQuiz('indian-navy')}>
           <QuizButton name="Indian Navy"  />
         </Grid>
-        <Grid item xs={5.2} sm={5.2} md={5.2}onClick={() => startQuiz('indian-air-force')}>
+        <Grid item xs={5.6} sm={5.6} md={5.6}onClick={() => startQuiz('indian-air-force')}>
           <QuizButton name="Indian Air Force"  />
         </Grid>
-        <Grid item xs={5.2} sm={5.2} md={5.2}onClick={() => startQuiz('indian-coast-guard')}>
+        <Grid item xs={5.6} sm={5.6} md={5.6}onClick={() => startQuiz('indian-coast-guard')}>
           <QuizButton name="Indian Coast Guard"  />
         </Grid>
       </Grid>
