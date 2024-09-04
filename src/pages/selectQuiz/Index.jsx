@@ -15,7 +15,7 @@ const SelectQuiz = () => {
     <>
       <Container  spacing={3}>
         <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
-          <Grid item xs={11}>
+          <Grid item xs={11} style={{textAlign:"center"}}>
             <h2>Select a category of your choice to begin the quiz</h2>
           </Grid>
         </Grid>
