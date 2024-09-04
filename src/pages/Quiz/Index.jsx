@@ -256,7 +256,7 @@ const Quiz = () => {
               width: "400px",
               position: "fixed",
               bottom: "0",
-              left: "0",
+              // left: "0",
             }}
           >
             Each quiz has 5 questions
