@@ -24,49 +24,23 @@ const Header = () => {
           zIndex: 100,
         }}
       >
-        <Toolbar>
+        <Toolbar className='headerContainer'>
           <Box
             display="flex"
-            justifyContent="center"
-            alignItems="center"
+          
+           
             width="100%"
-            sx={{ flexDirection: { xs: 'row', sm: 'row' } }}
-          >
-            <Link to="/" style={{ textDecoration: 'none' }}>
-            <Typography
-              variant="h6"
-              component="a"
-              href=""
-              sx={{ color: 'black', textDecoration: 'none', margin: '0 5px'
-                ,
-                fontSize:'15px',fontWeight:"bold"
-               }}
-            >
-              Home | 
-            </Typography>
-            </Link>
-            <Typography
-              variant="h6"
-              component="a"
-              href="#"
-              sx={{ color: 'black', textDecoration: 'none', margin: '0 5px'
-                ,
-                fontSize:'15px',fontWeight:"bold"
-               }}
-            >
-              Privacy Policy |
-            </Typography>
-            <Typography
-              variant="h6"
-              component="a"
-              href="#"
-              sx={{ color: 'black', textDecoration: 'none', margin: '0 5px'
-                ,
-                fontSize:'15px',fontWeight:"bold"
-               }}
-            >
-              Terms and Conditions 
-            </Typography>
+                >
+           
+           <ul
+           style={{ display: 'flex', justifyContent: 'space-between', listStyle: 'none', textDecoration: 'none', color: 'white', fontSize: '12px', fontWeight: 'bolder' }}
+           > <Link to="/" style={{ textDecoration: 'none' }}>
+           
+            <li style={{fontSize:"14px " ,color:"black" }}>Home |</li></Link>
+            <li style={{fontSize:"14px " ,color:"black" }}>Privacy Policy | </li>
+            <li style={{fontSize:"14px " ,color:"black" }}>Terms and conditions</li>
+           </ul>
+
           </Box>
         </Toolbar>
       </AppBar>

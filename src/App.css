@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
+  max-height: 100vh;
   /* Removed max-width to allow for more responsive design */
 }
 

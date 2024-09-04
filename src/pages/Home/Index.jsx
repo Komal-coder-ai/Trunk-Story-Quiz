@@ -14,23 +14,23 @@ const Home = () => {
     <>
 
       <Container>
-        <Grid container spacing={2} alignItems="center">
+        <Grid container  alignItems="center">
           <Grid item xs={10}>
-            <h1>
+            <h2>
               Welcome to the Trunk Story Quiz
-            </h1>
+            </h2>
           </Grid>
           <Grid item xs={2} container justifyContent="flex-end">
 
             <span className="arrow-btn" >
               <CallReceivedIcon
-              style={{ fontWeight: '900' ,fontSize:"50px"}}
+              style={{ fontWeight: '900' ,fontSize:"30px" , marginBottom:"20px"}}
               />
               {/* <ArrowOutwardIcon sx={{ fontWeight: 'bold' ,fontSize:"30px"}} /> */}
             </span>    </Grid>
         </Grid>
 
-        <Grid container justifyContent="center" alignItems="center" sx={{ my: 3 }}>
+        <Grid container justifyContent="center" alignItems="center" >
           <Box className="outerdiv">
             <Box className="innerdiv"></Box>
           </Box>
@@ -39,12 +39,13 @@ const Home = () => {
         <Grid container justifyContent="center" alignItems="center">
 
          <Grid item xs={11} justifyContent={"center"}>
-         <h2  
+         <h3  
          style={{
           fontWeight: '500',
+
          }}>
             Play our Indian Armed Forces Quizzes and win shopping discount coupons
-          </h2>
+          </h3>
           </Grid>
         </Grid>
 
