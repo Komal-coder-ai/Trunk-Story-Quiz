@@ -13,7 +13,7 @@ const SelectQuiz = () => {
 
   return (
     <>
-      <Container >
+      <Container  spacing={3}>
         <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
           <Grid item xs={11}>
             <h2>Select a category of your choice to begin the quiz</h2>

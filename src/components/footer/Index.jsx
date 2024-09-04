@@ -12,41 +12,35 @@ const Footer = () => {
     location.pathname === "/results";
 
   return (
-    <>
-      <div>
-        <Box
-          sx={{
-            clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
-            backgroundColor: "var(--footer-color)",
-            // height: "100vh",
-            // width: "426px",
-            width: "100%",
-            height: "200px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            // position: 'relative',
-            // bottom: '0',
-            zIndex: "-1",
+    <Box
+      sx={{
+        clipPath: "polygon(0 43%, 100% 0, 100% 100%, 0% 100%)",
+        backgroundColor: "var(--footer-color)",
+        width: "100%",
+        height: "200px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        zIndex: 1000, 
+      }}
+      className="footer"
+    >
+      {showNavLink && <Navbar />}
+      {!showNavLink && (
+        <p
+          style={{
+            marginTop: "auto",
+            textAlign: "center",
+            width: "400px",
           }}
-          className="footer"
         >
-          {showNavLink && <Navbar></Navbar>}
-          {!showNavLink && (
-            <p
-              style={{
-                marginTop: "auto",
-                textAlign: "center",
-
-                width: "400px",
-              }}
-            >
-              Each quiz has 5 questions
-            </p>
-          )}
-        </Box>
-      </div>
-    </>
+          Each quiz has 5 questions
+        </p>
+      )}
+    </Box>
   );
 };
 
