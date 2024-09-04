@@ -154,17 +154,7 @@ const Quiz = () => {
         <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
       </div>
 
-      <p
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          textAlign: 'center',
-          marginTop: '20px',
-          width: '400px',
-        }}
-      >
-        Each quiz has 5 questions
-      </p>
+     
     </>
   );
 };

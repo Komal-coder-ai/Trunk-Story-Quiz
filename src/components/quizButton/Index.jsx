@@ -7,7 +7,7 @@ const QuizButton = ({ name, bgimage }) => {
       <Button
         sx={{
           width: '100%',
-          height: '60px',
+          height: '80px',
           color: "var(--footer-color)",
           // backgroundImage: `url(${bgImage})`,
           backgroundColor: 'var(--black-color)',

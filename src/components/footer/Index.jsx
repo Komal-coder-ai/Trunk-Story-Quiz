@@ -1,28 +1,46 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import './index.css';
+import Navbar from '../Navbar';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
-  return (
-    <Box
-      sx={{
-        clipPath: "polygon(0 68%, 100% 16%, 100% 100%, 0% 100%)",
+  const location = useLocation();
+  const showNavLink = location.pathname === '/' || location.pathname === '/startquiz' || location.pathname === '/results';
 
-        backgroundColor: 'var(--footer-color)',
-        height:'200px',
-        width: '400px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'fixed',
-        bottom: '0',
-        zIndex: '-1',
-        padding: { xs: '10px', sm: '20px', md: '30px' }, 
-      }}
-      className="footer"
-    >
-    
-    </Box>
+  return (
+    <>
+
+      <Box
+        sx={{
+          clipPath: "polygon(0 43%, 100% 16%, 100% 100%, 0% 100%)",
+          backgroundColor: 'var(--footer-color)',
+          height: '800px',
+          width: '400px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          // position: 'relative',
+          // bottom: '0',
+          zIndex: '-1',
+          padding: { xs: '10px', sm: '20px', md: '30px' },
+        }}
+        className="footer"
+      >
+        {showNavLink && <Navbar></Navbar>}
+        {!showNavLink && <p
+          style={{
+
+            textAlign: 'center',
+
+            width: '400px',
+          }}
+        >
+          Each quiz has 5 questions
+        </p>}
+      </Box>
+
+    </>
   );
 };
 
