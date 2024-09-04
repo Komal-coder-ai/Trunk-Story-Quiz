@@ -137,7 +137,8 @@ const Quiz = () => {
         </div>
       </div>
 
-      <div
+  <div style={{height:"63px",width:"100%",display:"flex",justifyContent:"center",alignContent:'center'}}>
+  <div
         className="circle"
         style={{
           width: "40px",
@@ -153,6 +154,7 @@ const Quiz = () => {
       >
         <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
       </div>
+  </div>
 
      
     </>
