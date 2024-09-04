@@ -19,16 +19,14 @@ const Header = () => {
         <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }}
         className="BottomNavbar mobile-navbar"
         sx={{
-          position: 'fixed',
+          position: 'absolute',
           bottom: 0,
           zIndex: 100,
         }}
       >
         <Toolbar className='headerContainer'>
           <Box
-            display="flex"
-          
-           
+            display="flex" 
             width="100%"
                 >
            
@@ -36,9 +34,9 @@ const Header = () => {
            style={{ display: 'flex', justifyContent: 'space-between', listStyle: 'none', textDecoration: 'none', color: 'white', fontSize: '12px', fontWeight: 'bolder' }}
            > <Link to="/" style={{ textDecoration: 'none' }}>
            
-            <li style={{fontSize:"14px " ,color:"black" }}>Home |</li></Link>
-            <li style={{fontSize:"14px " ,color:"black" }}>Privacy Policy | </li>
-            <li style={{fontSize:"14px " ,color:"black" }}>Terms and conditions</li>
+            <li style={{fontSize:"12px " ,color:"black" }}> Home | </li></Link>
+            <li style={{fontSize:"12px " ,color:"black" }}> Privacy Policy | </li>
+            <li style={{fontSize:"12px " ,color:"black" }}> Terms and conditions </li>
            </ul>
 
           </Box>
