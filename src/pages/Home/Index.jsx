@@ -7,7 +7,7 @@ import ButtonDynamic from '../../components/button/Index';
 import Footer from '../../components/footer/Index';
 import './index.css';
 import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
-
+import  arrowimage from'../../assets/arrow.png'
 
 const Home = () => {
   return (
@@ -17,14 +17,17 @@ const Home = () => {
         <Grid container  alignItems="center">
           <Grid item xs={10}>
             <h2>
-              Welcome to the Trunk Story Quiz
+              Welcome  the to Trunk Story Quiz
             </h2>
           </Grid>
           <Grid item xs={2} container justifyContent="flex-end">
 
             <span className="arrow-btn" >
-              <CallReceivedIcon
-              style={{ fontWeight: '900' ,fontSize:"30px" , marginBottom:"20px"}}
+              {/* <CallReceivedIcon
+              /> */}
+              <img src={arrowimage} alt="" 
+               style={{ fontWeight: '900' ,fontSize:"30px" , marginBottom:"20px"}}
+             
               />
               {/* <ArrowOutwardIcon sx={{ fontWeight: 'bold' ,fontSize:"30px"}} /> */}
             </span>    </Grid>
