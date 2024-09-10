@@ -8,6 +8,8 @@ import Header from './components/header/Index';
 
 import './App.css';
 import Result from './pages/Result/Index';
+import TryCom from './pages/Try';
+
 
 const App = () => {
   const location = useLocation();
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/startquiz" element={<SelectQuiz />} />
           <Route path="/quiz/:category" element={<QuizQuestions />} />
           <Route path="/results" element={<Result />} />
+          <Route path="/Try" element={<TryCom></TryCom>} />
+
 
         </Routes>
       </main>
