@@ -777,7 +777,7 @@
 
 // export default Quiz;
 import React, { useState, useEffect } from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography, Button, CircularProgress } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import { collection, getDocs } from 'firebase/firestore';
 import CircleIcon from "@mui/icons-material/Circle";
@@ -892,10 +892,24 @@ const Quiz = () => {
     setHasSelectedOption(true);
   };
 
+  // if (questions.length === 0) {
+  //   return <Typography>Loading questions...</Typography>;
+  // }
+  // debugger
   if (questions.length === 0) {
-    return <Typography>Loading questions...</Typography>;
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '60vh',
+        backgroundColor: '#f5f5f5', // Optional: add a background color if needed
+      }}>
+        <CircularProgress size={60}/>
+      </div>
+    );
   }
-
+  
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
