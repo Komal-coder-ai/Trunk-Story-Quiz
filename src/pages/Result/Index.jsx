@@ -74,7 +74,8 @@ const Result = () => {
           style={{
             textAlign: "center",
             fontSize: "17px",
-            fontWeight: "bolder",
+            fontWeight: "bolder", 
+            margin:'30px 10px'
           }}
         >
           or , you can continue playing our quizzes , select a category from
