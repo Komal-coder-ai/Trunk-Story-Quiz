@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
          <ul
-           style={{width: '100%', display: 'flex',textAlign:"center", listStyle: 'none',height:'100%',alignItems:'center', textDecoration: 'none', color: 'white', fontSize: '15px', fontWeight: 'bolder' }}
+           style={{width: '100%', display: 'flex',textAlign:"center", listStyle: 'none',height:'100%',alignItems:'center', textDecoration: 'none', color: 'white', fontSize: '15px', fontWeight: 'bolder' ,marginRight:"15px"}}
            > <Link to="/" style={{ textDecoration: 'none' }}>
            
             <li style={{fontSize:"15px " ,color:"black" ,margin:"5px"}} > Home | </li></Link>
