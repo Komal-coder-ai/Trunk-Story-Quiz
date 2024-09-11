@@ -143,8 +143,8 @@ const Quiz = ({isSelected}) => {
 
   return (
     <>
-      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif"  }}>
-        <Grid container spacing={2} alignItems="center">
+      <div style={{ padding: "10px 20px 20px 20px", fontFamily: "Arial, sans-serif"  }}>
+        <Grid container  alignItems="center">
           <Grid item xs={12} container justifyContent="flex-end" padding={0}>
             <img src={arrowimg} alt=""   onClick={handleroute}/>
           </Grid>
@@ -195,7 +195,7 @@ const Quiz = ({isSelected}) => {
           </Box>
         </Grid>
         {currentQuestion && (
-          <div style={{overflow:"scroll",maxHeight:'55vh',scrollbarWidth:"none"}}>
+          <div style={{overflow:"scroll",maxHeight:'51vh',scrollbarWidth:"none"}}>
             <Typography
               variant="h6"
               component="p"
@@ -286,8 +286,9 @@ const Quiz = ({isSelected}) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              position: "absolute",
+              position: "fixed",
               margin: "auto",
+              // marginBottom:"30px"
             }}
           >
             <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
@@ -295,7 +296,7 @@ const Quiz = ({isSelected}) => {
     
           <p
             style={{
-              marginTop: "auto",
+              marginTop: "30px",
               textAlign: "center",
               width: "400px",
               position: "fixed",
