@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import QuizButton from "./../../components/quizButton/Index";
 
@@ -11,7 +11,8 @@ const Result = () => {
     console.log(category, "category");
     navigate(`/quiz/${category}`);
   };
-
+  const progressPercentage = total > 0 ? (score / total) * 100 : 0;
+  const progressPercentage2=0;
   return (
     <div>
       <Container>
@@ -33,8 +34,19 @@ const Result = () => {
             alignItems="center"
             sx={{ my: 3 }}
           >
-            <Box className="outerdiv">
-              <Box className="innerdiv"></Box>
+            <Box sx={{ width: "100%", marginTop: 2 }}>
+              <LinearProgress
+                variant="determinate"
+                value={progressPercentage}
+                sx={{
+                  height: 5,
+                  // borderRadius: 5,
+                  backgroundColor: "var(--black-color)",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "var(--footer-color)",
+                  },
+                }}
+              />
             </Box>
           </Grid>
 
@@ -67,8 +79,19 @@ const Result = () => {
             alignItems="center"
             sx={{ my: 0 }}
           >
-            <Box className="outerdiv">
-              <Box className="innerdiv"></Box>
+              <Box sx={{ width: "100%", marginTop: 2 }}>
+              <LinearProgress
+                variant="determinate"
+                value={progressPercentage2}
+                sx={{
+                  height: 5,
+                  // borderRadius: 5,
+                  backgroundColor: "var(--black-color)",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "var(--footer-color)",
+                  },
+                }}
+              />
             </Box>
           </Grid>
           <p
@@ -85,9 +108,9 @@ const Result = () => {
         </div>
 
         <div
-        //  style={{position:'fixed',justifyContent:'center',alignContent:'center',maxWidth:"100%",marginTop:'20px'}}
-        style={{marginTop:"30px"}}
-         >
+          //  style={{position:'fixed',justifyContent:'center',alignContent:'center',maxWidth:"100%",marginTop:'20px'}}
+          style={{ marginTop: "30px" }}
+        >
           <Grid container spacing={2} sx={{ mx: 0.1 }}>
             <Grid
               item

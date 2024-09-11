@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  LinearProgress,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import CallReceivedIcon from "@mui/icons-material/CallReceived";
 import homeImage from "../../assets/homePage.png";
@@ -10,6 +17,8 @@ import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
 import arrowimage from "../../assets/arrow.png";
 
 const Home = () => {
+  const progressPercentage = 0;
+
   return (
     <>
       <Container>
@@ -36,8 +45,22 @@ const Home = () => {
         </Grid>
 
         <Grid container justifyContent="center" alignItems="center">
-          <Box className="outerdiv">
+          {/* <Box className="outerdiv">
             <Box className="innerdiv"></Box>
+          </Box> */}
+          <Box sx={{ width: "100%", marginTop: 2 }}>
+            <LinearProgress
+              variant="determinate"
+              value={progressPercentage}
+              sx={{
+                height: 5,
+                // borderRadius: 5,
+                backgroundColor: "var(--black-color)",
+                "& .MuiLinearProgress-bar": {
+                  backgroundColor: "var(--footer-color)",
+                },
+              }}
+            />
           </Box>
         </Grid>
 
@@ -46,7 +69,7 @@ const Home = () => {
             <h3
               style={{
                 fontWeight: "500",
-                marginTop:"30px"
+                marginTop: "30px",
               }}
             >
               Play our Indian Armed Forces Quizzes and win shopping discount
