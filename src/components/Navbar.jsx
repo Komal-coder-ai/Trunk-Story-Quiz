@@ -1,20 +1,44 @@
-import { AppBar, Box, Toolbar } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+import React from "react";
+import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
-         <ul
-           style={{width: '100%', display: 'flex',textAlign:"center", listStyle: 'none',height:'100%',alignItems:'center', textDecoration: 'none', color: 'white', fontSize: '15px', fontWeight: 'bolder' ,marginRight:"15px"}}
-           > <Link to="/" style={{ textDecoration: 'none' }}>
-           
-            <li style={{fontSize:"15px " ,color:"black" ,margin:"5px"}} > Home | </li></Link>
-            <li style={{fontSize:"15px " ,color:"black"  ,margin:"5px"}}>    Privacy Policy | </li>
-            <li style={{fontSize:"15px " ,color:"black"  ,margin:"5px"}}> Terms and conditions </li>
-           </ul>
+     <div style={{height:'40px'}}>
+       
+     <div style={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+          <ul
+            style={{
+              display: "flex",
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              alignItems: "center",
+            }}
+          >
+            <li style={{ margin: "0 15px" }}>
+              <Link to="https://trunkstory.com" style={{ textDecoration: "none", color: "black" }}>
+                <Typography variant="body1" style={{fontSize:"14px"}}>Home</Typography>
+              </Link>
+            </li>
+            <li style={{ margin: "0 15px" }}>
+              <Link to="https://trunkstory.com/pages/privacy-policy" style={{ textDecoration: "none", color: "black" }}>
+                <Typography variant="body1" style={{fontSize:"14px"}}>Privacy Policy</Typography>
+              </Link>
+            </li>
+            <li style={{ margin: "0 15px" }}>
+              <Link to="https://trunkstory.com/pages/terms-and-conditions" style={{ textDecoration: "none", color: "black" }}>
+                <Typography variant="body1" style={{fontSize:"14px"}}>Terms and Conditions</Typography>
+              </Link>
+            </li>
+          </ul>
+        </div>
+     </div>
+    
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

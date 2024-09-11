@@ -12,11 +12,13 @@ const Result = () => {
     navigate(`/quiz/${category}`);
   };
   const progressPercentage = total > 0 ? (score / total) * 100 : 0;
-  const progressPercentage2=0;
+  const progressPercentage2 = 0;
   return (
     <div>
       <Container>
-        <div style={{ overflow: "scroll", height: "38vh" }}>
+        <div
+          style={{ overflow: "scroll", height: "38vh", scrollbarWidth: "none" }}
+        >
           <h1
             style={{
               width: "95%",
@@ -79,7 +81,7 @@ const Result = () => {
             alignItems="center"
             sx={{ my: 0 }}
           >
-              <Box sx={{ width: "100%", marginTop: 2 }}>
+            <Box sx={{ width: "100%", marginTop: 2 }}>
               <LinearProgress
                 variant="determinate"
                 value={progressPercentage2}
@@ -106,12 +108,17 @@ const Result = () => {
             below to start playing again:
           </p>
         </div>
-
+      
         <div
-          //  style={{position:'fixed',justifyContent:'center',alignContent:'center',maxWidth:"100%",marginTop:'20px'}}
-          style={{ marginTop: "30px" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            marginTop: "20px",
+            marginLeft: "14px",
+          }}
         >
-          <Grid container spacing={2} sx={{ mx: 0.1 }}>
+          <Grid container spacing={2}>
             <Grid
               item
               xs={5.8}
@@ -119,15 +126,14 @@ const Result = () => {
               md={5.8}
               onClick={() => startQuiz("indian-army")}
             >
+              {" "}
               <QuizButton name="Indian Army" />
             </Grid>
-            <Grid
-              item
+            <Grid  item
               xs={5.8}
               sm={5.8}
-              md={5.8}
-              onClick={() => startQuiz("indian-navy")}
-            >
+              md={5.8} onClick={() => startQuiz("indian-navy")}>
+              {" "}
               <QuizButton name="Indian Navy" />
             </Grid>
           </Grid>

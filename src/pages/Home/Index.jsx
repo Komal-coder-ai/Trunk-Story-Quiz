@@ -81,12 +81,15 @@ const Home = () => {
 
       <Grid container justifyContent="center" sx={{ my: 3 }}>
         <Link to="/startquiz">
-          <ButtonDynamic
+          {/* <ButtonDynamic
             width="200px"
             height="50px"
             bgColor="black"
             text="Let's Start"
-          />
+            class="button1"
+            
+          /> */}
+   <button className="button"><span>Let's Start </span></button>
         </Link>
       </Grid>
     </>

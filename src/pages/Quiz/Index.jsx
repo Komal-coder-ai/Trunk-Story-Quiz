@@ -15,7 +15,7 @@ import "./index.css";
 import arrowimg from "../../assets/arrow.png";
 import { db } from "../../firebase";
 
-const Quiz = () => {
+const Quiz = ({isSelected}) => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -123,10 +123,12 @@ const Quiz = () => {
           justifyContent: "center",
           alignItems: "center",
           height: "60vh",
-          backgroundColor: "#f5f5f5", 
+          // backgroundColor: "rgb(13, 13, 13)", 
         }}
       >
-        <CircularProgress size={60} />
+        <CircularProgress size={60}   sx={{
+          color: "rgb(13, 13, 13)", // Custom color using a CSS variable
+        }}/>
       </div>
     );
   }
@@ -134,6 +136,7 @@ const Quiz = () => {
   const currentQuestion = questions[currentQuestionIndex];
   const progressPercentage =
     ((currentQuestionIndex + 1) / questions.length) * 100;
+    const buttonClass = `button ${isSelected ? 'selected' : ''}`;
 
   return (
     <>
@@ -222,6 +225,7 @@ const Quiz = () => {
 
                   return (
                     <Button
+                    
                       key={index}
                       onClick={() => handleOptionClick(index)}
                       sx={{
@@ -251,6 +255,7 @@ const Quiz = () => {
                         {currentQuestion[optionKey]}
                       </p>
                     </Button>
+                   
                   );
                 }
               )}
@@ -268,7 +273,6 @@ const Quiz = () => {
           alignContent: "center",
         }}
       >
-        {!hasSelectedOption && (
           <div
             className="circle"
             style={{
@@ -285,8 +289,7 @@ const Quiz = () => {
           >
             <p style={{ margin: 0 }}>{currentQuestionIndex + 1}</p>
           </div>
-        )}{" "}
-        {!hasSelectedOption && (
+    
           <p
             style={{
               marginTop: "auto",
@@ -296,9 +299,9 @@ const Quiz = () => {
               bottom: "0",
             }}
           >
-            Each quiz has 5 questions
+            Each Quiz has 5 Questions
           </p>
-        )}{" "}
+     
       </div>
     </>
   );
