@@ -7,7 +7,7 @@ import {
   LinearProgress,
   Typography,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CallReceivedIcon from "@mui/icons-material/CallReceived";
 import homeImage from "../../assets/homePage.png";
 import ButtonDynamic from "../../components/button/Index";
@@ -17,8 +17,12 @@ import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
 import arrowimage from "../../assets/arrow.png";
 
 const Home = () => {
+  const navigate=useNavigate();
   const progressPercentage = 0;
 
+const handleroute=()=>{
+  navigate("/")
+}
   return (
     <>
       <Container>
@@ -38,6 +42,7 @@ const Home = () => {
                   fontSize: "30px",
                   marginBottom: "20px",
                 }}
+                onClick={handleroute}
               />
               {/* <ArrowOutwardIcon sx={{ fontWeight: 'bold' ,fontSize:"30px"}} /> */}
             </span>{" "}

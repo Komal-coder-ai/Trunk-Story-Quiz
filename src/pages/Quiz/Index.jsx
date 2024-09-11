@@ -25,7 +25,10 @@ const Quiz = ({isSelected}) => {
   const { category } = useParams();
   const navigate = useNavigate();
 
- 
+ const handleroute=()=>{
+  navigate('/')
+  
+ }
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -136,14 +139,14 @@ const Quiz = ({isSelected}) => {
   const currentQuestion = questions[currentQuestionIndex];
   const progressPercentage =
     ((currentQuestionIndex + 1) / questions.length) * 100;
-    const buttonClass = `button ${isSelected ? 'selected' : ''}`;
+
 
   return (
     <>
       <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} container justifyContent="flex-end" padding={0}>
-            <img src={arrowimg} alt="" />
+            <img src={arrowimg} alt=""   onClick={handleroute}/>
           </Grid>
 
           <Grid item xs={11}>

@@ -94,9 +94,6 @@ const SelectQuiz = () => {
         </Grid>
       </Grid>
 
-      {/* <Button onClick={handleBack} variant="contained" color="primary">
-        Back to Home
-      </Button> */}
     </>
   );
 };
