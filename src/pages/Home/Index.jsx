@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -17,12 +17,27 @@ import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
 import arrowimage from "../../assets/arrow.png";
 
 const Home = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const progressPercentage = 0;
 
-const handleroute=()=>{
-  navigate("/")
-}
+  const handleroute = () => {
+    navigate("/");
+  };
+
+  const [isAnimating, setIsAnimating] = useState(false);
+  // const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent immediate navigation
+
+    // Trigger animation by setting state
+    setIsAnimating(true);
+
+    // Delay navigation to allow animation to complete
+    setTimeout(() => {
+      navigate('/startquiz'); // Navigate to the new page
+    }, 1000); // 1000 milliseconds = 1 second
+  };
   return (
     <>
       <Container>
@@ -84,19 +99,27 @@ const handleroute=()=>{
         </Grid>
       </Container>
 
-      <Grid container justifyContent="center" sx={{ my: 3 }}>
+      {/* <Grid container justifyContent="center" sx={{ my: 3 }}>
         <Link to="/startquiz">
-          {/* <ButtonDynamic
-            width="200px"
-            height="50px"
-            bgColor="black"
-            text="Let's Start"
-            class="button1"
-            
-          /> */}
-   <button className="button"><span>Let's Start </span></button>
+         
+          <button className="button">
+            <span>Let's Start </span>
+          </button>
         </Link>
-      </Grid>
+      </Grid> */}
+      {/* <Grid container justifyContent="center" sx={{ my: 3 }}>
+        <button className="button" onClick={handleClick}>
+          <span>{text}</span>
+        </button>
+      </Grid> */}
+       <Grid container justifyContent="center" sx={{ my: 3 }}>
+      <button
+        className={`button ${isAnimating ? 'animate' : ''}`}
+        onClick={handleClick}
+      >
+        <span>Let's Start</span>
+      </button>
+    </Grid>
     </>
   );
 };
