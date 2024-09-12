@@ -73,13 +73,23 @@ const Result = () => {
               {" "}
               SHOP NOW
             </h2> */}
-            <a href="https://trunkstory.com/" style={{ textDecoration: "none" }}>
+            <a href="https://trunkstory.com/" style={{ textDecoration: "underline" }}>
               <h2
+                // style={{
+                //   // textAlign: "center",
+                //   // fontSize: "19px",
+                //   // color: "var(--black-color)",
+                //   // cursor:'pointer',
+
+                // }}
                 style={{
                   textAlign: "center",
                   fontSize: "19px",
                   color: "var(--black-color)",
-                  cursor:'pointer'
+                  cursor: 'pointer',
+                  textDecoration: "underline", 
+                  textDecorationColor: "var(--black-color)", 
+                  textDecorationThickness: "2px", 
                 }}
               >
                 SHOP NOW
