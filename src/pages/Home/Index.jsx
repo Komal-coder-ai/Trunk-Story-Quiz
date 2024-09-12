@@ -36,7 +36,7 @@ const Home = () => {
     // Delay navigation to allow animation to complete
     setTimeout(() => {
       navigate('/startquiz'); // Navigate to the new page
-    }, 1000); // 1000 milliseconds = 1 second
+    }, 500); // 1000 milliseconds = 1 second
   };
   return (
     <>
