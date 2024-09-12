@@ -25,18 +25,15 @@ const Home = () => {
   };
 
   const [isAnimating, setIsAnimating] = useState(false);
-  // const navigate = useNavigate();
 
   const handleClick = (event) => {
-    event.preventDefault(); // Prevent immediate navigation
+    event.preventDefault();
 
-    // Trigger animation by setting state
     setIsAnimating(true);
 
-    // Delay navigation to allow animation to complete
     setTimeout(() => {
-      navigate('/startquiz'); // Navigate to the new page
-    }, 500); // 1000 milliseconds = 1 second
+      navigate("/startquiz");
+    }, 500);
   };
   return (
     <>
@@ -112,14 +109,14 @@ const Home = () => {
           <span>{text}</span>
         </button>
       </Grid> */}
-       <Grid container justifyContent="center" sx={{ my: 3 }}>
-      <button
-        className={`button ${isAnimating ? 'animate' : ''}`}
-        onClick={handleClick}
-      >
-        <span>Let's Start</span>
-      </button>
-    </Grid>
+      <Grid container justifyContent="center" sx={{ my: 3 }}>
+        <button
+          className={`button ${isAnimating ? "animate" : ""}`}
+          onClick={handleClick}
+        >
+          <span>Let's Start</span>
+        </button>
+      </Grid>
     </>
   );
 };
