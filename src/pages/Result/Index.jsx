@@ -60,10 +60,10 @@ const Result = () => {
               flexDirection: "column",
             }}
           >
-            Based on Your performance , you get a 5 % discount coupon to shop
+            Based on your performance, you get a 5 % discount coupon to shop
             with us.
-            <span>Coupon code : QUIZ766</span>
-            <h2
+            <span>Coupon code: QUIZ766</span>
+            {/* <h2
               style={{
                 textAlign: "center",
                 fontSize: "18px",
@@ -72,7 +72,19 @@ const Result = () => {
             >
               {" "}
               SHOP NOW
-            </h2>
+            </h2> */}
+            <a href="https://trunkstory.com/" style={{ textDecoration: "none" }}>
+              <h2
+                style={{
+                  textAlign: "center",
+                  fontSize: "19px",
+                  color: "var(--black-color)",
+                  cursor:'pointer'
+                }}
+              >
+                SHOP NOW
+              </h2>
+            </a>
           </p>
 
           <Grid
@@ -104,11 +116,11 @@ const Result = () => {
               margin: "30px 10px",
             }}
           >
-            or , you can continue playing our quizzes , select a category from
+            or you can continue playing our quizzes, select a category from
             below to start playing again:
           </p>
         </div>
-      
+
         <div
           style={{
             display: "flex",
@@ -129,10 +141,13 @@ const Result = () => {
               {" "}
               <QuizButton name="Indian Army" />
             </Grid>
-            <Grid  item
+            <Grid
+              item
               xs={5.8}
               sm={5.8}
-              md={5.8} onClick={() => startQuiz("indian-navy")}>
+              md={5.8}
+              onClick={() => startQuiz("indian-navy")}
+            >
               {" "}
               <QuizButton name="Indian Navy" />
             </Grid>

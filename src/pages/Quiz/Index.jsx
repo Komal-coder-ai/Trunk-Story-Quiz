@@ -160,7 +160,7 @@ const Quiz = ({isSelected}) => {
                 fontWeight: "bold",
               }}
             >
-              {category.replace("-", " ").toUpperCase()} Quiz
+              {category.replace("-", " ").toUpperCase()} QUIZ
               <span
                 style={{
                   fontSize: "30px",

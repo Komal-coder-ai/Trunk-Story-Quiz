@@ -10,9 +10,9 @@ const SelectQuiz = () => {
     navigate(`/quiz/${category}`);
   };
 
-  const handleBack = () => {
-    navigate("/");
-  };
+  // const handleroute = () => {
+  //   navigate("/");
+  // };
   const progressPercentage = 0;
 
   return (
