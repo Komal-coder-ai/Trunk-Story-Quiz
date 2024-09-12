@@ -60,7 +60,7 @@ const Result = () => {
               flexDirection: "column",
             }}
           >
-            Based on your performance, you get a 5 % discount coupon to shop
+            Based on your performance, you get a 5% discount coupon to shop
             with us.
             <span>Coupon code: QUIZ766</span>
             {/* <h2
