@@ -30,12 +30,63 @@ const Quiz = ({isSelected}) => {
   
  }
 
+  // useEffect(() => {
+  //   const fetchQuestions = async () => {
+  //     try {
+     
+  //       const collectionName =
+  //         category === "indian-navy" ? "Question_Indian_Air_Force": "Question_Indian_Navy" : "Question";
+  //       console.log(`Fetching from collection: ${collectionName}`);
+
+  //       const querySnapshot = await getDocs(collection(db, collectionName));
+  //       if (querySnapshot.empty) {
+  //         console.warn(`No documents found in collection: ${collectionName}`);
+  //       }
+
+  //       const allQuestions = querySnapshot.docs.map((doc) => doc.data());
+  //       console.log("All Questions:", allQuestions);
+
+      
+  //       const shuffledQuestions = allQuestions.sort(() => 0.5 - Math.random());
+  //       const selectedQuestions = shuffledQuestions.slice(0, 5);
+
+  //       console.log("Selected Questions:", selectedQuestions);
+
+  //       setQuestions(selectedQuestions);
+  //     } catch (error) {
+  //       console.error("Error fetching questions: ", error);
+  //     }
+  //   };
+
+  //   fetchQuestions();
+  // }, [category]);
+
+
+
+
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-     
-        const collectionName =
-          category === "indian-navy" ? "Question_Indian_Navy" : "Question";
+        let collectionName;
+
+        switch (category) {
+          case "indian-navy":
+            collectionName = "Question_Indian_Navy";
+            break;
+          case "indian-air-force":
+            collectionName = "Question_Indian_Air_Force";
+            break;
+          case "indian-coast-guard":
+            collectionName = "Question_Indian_Coast_Guard";
+            break;
+          case "indian-army":
+            collectionName = "Question";
+            break;
+          default:
+            collectionName = "Default_Collection"; 
+            break;
+        }
+
         console.log(`Fetching from collection: ${collectionName}`);
 
         const querySnapshot = await getDocs(collection(db, collectionName));
@@ -46,7 +97,6 @@ const Quiz = ({isSelected}) => {
         const allQuestions = querySnapshot.docs.map((doc) => doc.data());
         console.log("All Questions:", allQuestions);
 
-      
         const shuffledQuestions = allQuestions.sort(() => 0.5 - Math.random());
         const selectedQuestions = shuffledQuestions.slice(0, 5);
 
@@ -60,7 +110,6 @@ const Quiz = ({isSelected}) => {
 
     fetchQuestions();
   }, [category]);
-
   useEffect(() => {
     if (isAnswered) {
       const timer = setTimeout(() => {
