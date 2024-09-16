@@ -13,7 +13,7 @@ import TryCom from './pages/Try';
 
 const App = () => {
   const location = useLocation();
-  const showHeaderFooter = location.pathname === '/' || location.pathname === '/startquiz' || location.pathname === '/results';
+  const showHeaderFooter = location.pathname === '/' || location.pathname === '/startquiz' ;
 
   return (
     <div className="app-container">

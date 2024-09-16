@@ -188,6 +188,7 @@ import React from "react";
 import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import QuizButton from "./../../components/quizButton/Index";
+import Header from "../../components/header/Index";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -214,10 +215,11 @@ const Result = () => {
   const { discount, code } = getDiscountInfo(score);
 
   return (
-    <div>
+    <div    style={{ overflow: "scroll", height: "90vh", scrollbarWidth: "none"}}>
+      <Header />
       <Container>
         <div
-          style={{ overflow: "scroll", height: "53vh", scrollbarWidth: "none" }}
+          // style={{ overflow: "scroll", height: "53vh", scrollbarWidth: "none" }}
         >
           <h1
             style={{
@@ -259,7 +261,8 @@ const Result = () => {
               flexDirection: "column",
             }}
           >
-            Based on your performance, you get a {discount}% discount coupon to shop with us.
+            Based on your performance, you get a {discount}% discount coupon to
+            shop with us.
             <span>Coupon code: {code}</span>
             <a
               href="https://trunkstory.com/"
@@ -309,7 +312,8 @@ const Result = () => {
               margin: "30px 10px",
             }}
           >
-            Or you can continue playing our quizzes. Select a category from below to start playing again:
+            Or you can continue playing our quizzes. Select a category from
+            below to start playing again:
           </p>
 
           <div
@@ -340,14 +344,20 @@ const Result = () => {
               >
                 <QuizButton name="Indian Navy" />
               </Grid>
-              <Grid item xs={5.6} sm={5.6} md={5.6}>
-                <QuizButton name="Indian Air Force" />
+              <Grid
+                item
+                xs={5.8}
+                sm={5.8}
+                md={5.8}
+                onClick={() => startQuiz("indian-air-force")}
+              >
+                <QuizButton name="Indian Air Force " />
               </Grid>
               <Grid
                 item
-                xs={5.6}
-                sm={5.6}
-                md={5.6}
+                xs={5.8}
+                sm={5.8}
+                md={5.8}
                 onClick={() => startQuiz("indian-coast-guard")}
               >
                 <QuizButton name="Indian Coast Guard" />
