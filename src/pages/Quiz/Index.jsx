@@ -244,12 +244,12 @@ const Quiz = ({isSelected}) => {
           </Box>
         </Grid>
         {currentQuestion && (
-          <div style={{overflow:"scroll",maxHeight:'51vh',scrollbarWidth:"none"}}>
+          <div style={{overflow:"scroll",maxHeight:'54vh',scrollbarWidth:"none"}}>
             <Typography
               variant="h6"
               component="p"
               gutterBottom
-              style={{ margin: "25px 5px" }}
+              style={{ margin: "11px 5px" }}
             >
               
               <strong>
