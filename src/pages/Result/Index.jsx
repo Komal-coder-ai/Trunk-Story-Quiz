@@ -215,7 +215,7 @@ const Result = () => {
   const { discount, code } = getDiscountInfo(score);
 
   return (
-    <div style={{ overflow: "scroll", height: "90vh", scrollbarWidth: "none" }}>
+    <div style={{ overflow: "scroll", height: "85vh", scrollbarWidth: "none" }}>
       <Header />
       <Container>
         <div
