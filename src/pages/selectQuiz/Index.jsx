@@ -101,6 +101,7 @@
 import React from "react";
 import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import QuizButton from "../../components/quizButton/Index";
+import GoogleAds from "../../components/googleads";
 
 const SelectQuiz = () => {
   const progressPercentage = 0;
@@ -136,6 +137,9 @@ const SelectQuiz = () => {
         </Box>
       </Container>
 
+      <GoogleAds client="ca-pub-5243466940901679" slot="1743918046" />
+
+      
       <Grid container spacing={1} sx={{ mx: 0.1, my: 3 }}>
         <Grid item xs={5.6} sm={5.6} md={5.6}>
           <QuizButton name="Indian Army" to="/quiz/indian-army" />

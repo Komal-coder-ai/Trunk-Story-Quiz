@@ -189,6 +189,7 @@ import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import QuizButton from "./../../components/quizButton/Index";
 import Header from "../../components/header/Index";
+import GoogleAds from "../../components/googleads";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -232,6 +233,10 @@ const Result = () => {
           >
             Well Played! You scored {score} out of {total}
           </h1>
+
+          <GoogleAds client="ca-pub-5243466940901679" slot="5397827255" />
+
+
           <Grid
             container
             justifyContent="center"
@@ -252,6 +257,8 @@ const Result = () => {
               />
             </Box>
           </Grid>
+
+
 
           <p
             style={{

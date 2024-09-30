@@ -15,6 +15,7 @@ import Footer from "../../components/footer/Index";
 import "./index.css";
 import { BsFillArrowDownLeftSquareFill } from "react-icons/bs";
 import arrowimage from "../../assets/arrow.png";
+import GoogleAds from "../../components/googleads";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -60,6 +61,9 @@ const Home = () => {
             </span>{" "}
           </Grid>
         </Grid>
+
+
+        <GoogleAds client="ca-pub-5243466940901679" slot="5874734744" />
 
         <Grid container justifyContent="center" alignItems="center">
           {/* <Box className="outerdiv">
