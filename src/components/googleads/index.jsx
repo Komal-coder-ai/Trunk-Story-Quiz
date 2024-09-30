@@ -2,14 +2,17 @@ import React, { useEffect } from 'react';
 
 const GoogleAds = ({ client, slot }) => {
     useEffect(() => {
-        // Load the Google Ads script
         const script = document.createElement('script');
         script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         script.async = true;
         script.crossOrigin = "anonymous";
         document.body.appendChild(script);
 
-        // Clean up the script when the component unmounts
+        // Initialize ads after the script is loaded
+        script.onload = () => {
+            window.adsbygoogle && window.adsbygoogle.push({});
+        };
+
         return () => {
             document.body.removeChild(script);
         };
@@ -22,7 +25,7 @@ const GoogleAds = ({ client, slot }) => {
              data-ad-slot={slot}
              data-ad-format="auto"
              data-full-width-responsive="true">
-        </ins>
+    </ins>
     );
 };
 
