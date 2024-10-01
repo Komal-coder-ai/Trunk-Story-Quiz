@@ -2,11 +2,12 @@
 import React from "react";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import "./index.css"
 
 const Navbar = () => {
   return (
-    <div>
-     <div style={{height:'40px'}}>
+    
+     <div className="navlink_click" style={{height:'40px'}}>
        
      <div style={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
           <ul
@@ -36,8 +37,6 @@ const Navbar = () => {
           </ul>
         </div>
      </div>
-    
-    </div>
   );
 };
 

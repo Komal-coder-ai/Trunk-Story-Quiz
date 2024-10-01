@@ -24,11 +24,11 @@ const Footer = () => {
         position: "fixed",
         bottom: 0,
         left: 0,
-        zIndex: -1, 
+        // zIndex: -1, 
       }}
       className="footer"
     >
-      {showNavLink &&
+   {showNavLink &&
      <div className="" style={  
       {
         marginTop: "auto",
