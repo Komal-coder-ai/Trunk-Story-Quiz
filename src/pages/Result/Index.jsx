@@ -217,7 +217,8 @@ const Result = () => {
 
   return (
     <div style={{ overflow: "scroll", height: "85vh", scrollbarWidth: "none" }}>
-      <Header />
+      {/* <Header /> */}
+      <GoogleAds client="ca-pub-5243466940901679" slot="5397827255" />
       <Container>
         <div
         // style={{ overflow: "scroll", height: "53vh", scrollbarWidth: "none" }}
@@ -234,7 +235,7 @@ const Result = () => {
             Well Played! You scored {score} out of {total}
           </h1>
 
-          <GoogleAds client="ca-pub-5243466940901679" slot="5397827255" />
+        
 
 
           <Grid

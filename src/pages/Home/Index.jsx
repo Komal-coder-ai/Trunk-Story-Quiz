@@ -39,6 +39,7 @@ const Home = () => {
   return (
     <>
       <Container>
+         <GoogleAds client="ca-pub-5243466940901679" slot="5874734744" />
         <Grid container alignItems="center">
           <Grid item xs={10}>
             <h2>Welcome the to Trunk Story Quiz</h2>
@@ -63,7 +64,7 @@ const Home = () => {
         </Grid>
 
 
-        <GoogleAds client="ca-pub-5243466940901679" slot="5874734744" />
+       
 
         <Grid container justifyContent="center" alignItems="center">
           {/* <Box className="outerdiv">

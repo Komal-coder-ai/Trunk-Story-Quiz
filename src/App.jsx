@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {showHeaderFooter && <Header />}
+      {/* {showHeaderFooter && <Header />} */}
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

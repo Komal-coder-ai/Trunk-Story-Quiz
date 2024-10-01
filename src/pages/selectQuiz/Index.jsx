@@ -109,6 +109,7 @@ const SelectQuiz = () => {
   return (
     <>
       <Container spacing={3}>
+        <GoogleAds client="ca-pub-5243466940901679" slot="1743918046" />
         <Grid container spacing={3} alignItems="center" justifyContent="center">
           <Grid item xs={11} style={{ textAlign: "center" }}>
             <h2>Select a category of your choice to begin the quiz</h2>
@@ -137,7 +138,7 @@ const SelectQuiz = () => {
         </Box>
       </Container>
 
-      <GoogleAds client="ca-pub-5243466940901679" slot="1743918046" />
+      {/* <GoogleAds client="ca-pub-5243466940901679" slot="1743918046" /> */}
 
       
       <Grid container spacing={1} sx={{ mx: 0.1, my: 3 }}>
